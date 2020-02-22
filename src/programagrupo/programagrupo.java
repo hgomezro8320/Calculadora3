@@ -17,25 +17,28 @@ public static void main(String[] args)
 {
    Scanner lector = new Scanner (System.in);
    
-   double salario, salario_ordinario = 0, salario_extra= 0, a_pagar;
-   int h_ord, e_diu, e_noc;
+   double valor_hora, salario_ordinario = 0, salario_extra= 0, a_pagar;
+   int hora_ordinaria, horas_extras_diurnas, horas_extras_nocturnas;
+
+
+   System.out.println("Ingrese el valor de la hora de acuerdo a su salario:");
+   valor_hora = lector.nextDouble();
    
+   System.out.println("Ingrese la cantidad de horas ordinarias trabajadas: ");
+   hora_ordinaria = lector.nextInt();
    
-   System.out.println("Ingrese el salario por hora:"); 
-   salario = lector.nextDouble();
-   System.out.println("Ingrese la cantidad de horas ordinarias " + " trabajadas: ");
-   h_ord = lector.nextInt();
-   System.out.println("Ingrese la cantidad de horas extras diurnas " + " trabajadas: ");
-   e_diu = lector.nextInt();
-   System.out.println("Ingrese la cantidad de horas extras nocturnas " + " trabajadas: ");
-   e_noc = lector.nextInt();
+   System.out.println("Ingrese la cantidad de horas extras diurnas trabajadas: ");
+   horas_extras_diurnas = lector.nextInt();
    
-   salario_ordinario = h_ord * salario;
-   salario_extra = (e_diu * salario) * 1.25 + (e_noc * salario) * 1.5;
-   a_pagar = salario_ordinario + salario_extra;
-   
-   System.out.println("El valor de las horas extras trabajadas es:" +salario_extra);
-   System.out.println("El valor a pagar al empleado es:" +a_pagar);
+   System.out.println("Ingrese la cantidad de horas extras nocturnas trabajadas: ");
+   horas_extras_nocturnas = lector.nextInt();
+
+  salario_ordinario = hora_ordinaria * valor_hora;
+  salario_extra = (horas_extras_diurnas * valor_hora) * 1.25 + (horas_extras_nocturnas * valor_hora) * 1.75;
+  a_pagar = salario_ordinario + salario_extra;
+
+  System.out.println("El valor de las horas extras trabajadas es:" + salario_extra);
+  System.out.println("El valor a pagar al empleado es:" + a_pagar);
    
    
     }
