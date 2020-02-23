@@ -6,7 +6,7 @@
 //-horas extras nocturnas trabajadas
 
 //-horas extras diurnas: 25%
-//-horas extras nocturnas: 50%
+//-horas extras nocturnas: 75%
 
 package programagrupo;
 
